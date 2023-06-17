@@ -1,4 +1,22 @@
 #include <bits/stdc++.h> 
+/*
+INtution:Basic intuition is to check that the formal element must be greater than later element
+Follow the divide and conquer method we go to thesmallest part of this part of the array that is of one element and then
+And since one element array is already sorted so we Remind those are two array 
+and then go for the next step and we keep on sorting and merging so thatfor next
+ step it become easier to calculate the number of countbecause we have only to find
+  the first element of the first array which is greaterthen the rest of the element 
+  of the secondarythen and then we can directly calculate through the formula of Mid minus I
+Problem:So I was facing problem that when a sorting happens order 
+changes of the array so in next round countto be calculated that is 
+the answer to be calculated may overlap but but try running I got to know 
+that in each step of the merge which chooses one from first of array and other
+ element from the second and each time the pair will be new sothere's no possibility
+  of overlapping so it's OK tosort the array and we does the sorting to teach out the
+   calculation of the count
+
+*/
+
 void merge(long long *arr,int l, int mid,int r,int &count){
     int t1=mid-l+1;
     int t2=r-mid;
